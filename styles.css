@@ -1,5 +1,5 @@
 body {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
@@ -8,49 +8,80 @@ body {
     background-image: url(img/LeaflatMapBG.png);
     background-size: cover; /* 圖片尺寸根據容器大小等比例調整 */
     background-position: center; /* 圖片置中 */
-    background-repeat: no-repeat; /* 防止圖片重複 */
+
 
     font-family: 'Noto Sans JP', sans-serif;
+
+
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 添加相对定位，以便 .LocaBUG 使用绝对定位相对于此容器定位 */
 }
 
 .LocaBUG {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-image: url(img/Location.png);
-    background-size: cover; /* 图片尺寸根据容器大小等比例调整 */
-    background-position: center; /* 图片置中 */
-    background-repeat: no-repeat; /* 防止图片重复 */
-    
-    /* 居中 */
-    position: absolute;
-    top: 132px;
-    left: 810px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute; /* 使用绝对定位 */
+    left: calc(50% - 135px); /* 让 .LocaBUG 距离 .headerContainer 左边固定 30px 的位置 */
+    top: calc(61px);
+
 }
 
 .header {
-    position: absolute;
-    text-align: center; /* 文字置中 */
-    font-size: 2em; /* 放大文字大小 */
-    margin-top: 0px; /* 調整頂部間距 */
+    text-align: center;
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 60px;
 
-    top: 140px;
+    margin-bottom: 15px;
+
     z-index: 10;
 }
 
+.discriptionContainer_Frame{
+    
+    width: 100%; /* 調整寬度至適合的大小 */
+    /* height: 100%; */
+
+    display: flex;
+
+    justify-content: center;
+    /* align-items: center; */
+
+
+}
 
 .discriptionContainer {
+
     pointer-events: all;
     position: relative;
-    padding-top: 0;
-    padding-bottom: 0;
-    width: 571px; /* 調整寬度至適合的大小 */
-    height: 550px; /* 調整高度至適合的大小 */
+
+    width: 500px; /* 調整寬度至適合的大小 */
+
+    min-width: 300px;
+
+    left: 0%;
     border-radius: 30px;
     border: 2px solid rgba(255, 255, 255, 0.6);
     box-sizing: border-box;
     backdrop-filter: blur(4px);
     background-color: #ffffff3a;
+    display: inline-block;
+
+    /* top: 55; */
+
+
+
 }
+
 
 .item{
     margin-left: 20px;
@@ -65,7 +96,7 @@ body {
 
 .title{
     margin-bottom: 10px;
-    font-size: 23px;
+    /* font-size: 2em; */
     color: #555555;
     font-weight: bold;
 }
@@ -74,14 +105,14 @@ body {
     margin-bottom: 15px;
 }
 
-.subtitle{    
+.subtitle{
     margin-bottom: 5px;
     color: #555555;
-    font-size: 18px;
+    /* font-size: 1em; */
 }
 
 .info{
-    margin-top: 5px;
+    /* margin-top: 2em; */
 }
 
 .info.a{
