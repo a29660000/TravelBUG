@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 100vh; /* 將高度設置為視窗的高度 */
+
+    background-image: url(img/LeaflatMapBG.png);
+    background-size: cover; /* 圖片尺寸根據容器大小等比例調整 */
+    background-position: center; /* 圖片置中 */
+    background-repeat: no-repeat; /* 防止圖片重複 */
+
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.LocaBUG {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/Location.png);
+    background-size: cover; /* 图片尺寸根据容器大小等比例调整 */
+    background-position: center; /* 图片置中 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    
+    /* 居中 */
+    position: absolute;
+    top: 132px;
+    left: 810px;
+}
+
+.header {
+    position: absolute;
+    text-align: center; /* 文字置中 */
+    font-size: 2em; /* 放大文字大小 */
+    margin-top: 0px; /* 調整頂部間距 */
+
+    top: 140px;
+    z-index: 10;
+}
+
+
+.discriptionContainer {
+    pointer-events: all;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 571px; /* 調整寬度至適合的大小 */
+    height: 550px; /* 調整高度至適合的大小 */
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    backdrop-filter: blur(4px);
+    background-color: #ffffff3a;
+}
+
+.item{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #555555;
+}
+.item.end{
+    border-bottom: 0px solid #555555;
+}
+
+.title{
+    margin-bottom: 10px;
+    font-size: 23px;
+    color: #555555;
+    font-weight: bold;
+}
+
+.subitem{
+    margin-bottom: 15px;
+}
+
+.subtitle{    
+    margin-bottom: 5px;
+    color: #555555;
+    font-size: 18px;
+}
+
+.info{
+    margin-top: 5px;
+}
+
+.info.a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #7EBC32;
+    overflow-wrap: anywhere;
+}
